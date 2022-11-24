@@ -157,7 +157,8 @@ OperationDialog::initialize() {
     usageGrid_->EnableEditing(false);
     usageGrid_->DisableDragColSize();
     usageGrid_->DisableDragRowSize();
-    usageGrid_->SetDefaultCellBackgroundColour(ProDeConstants::WHITE_COLOR);
+    usageGrid_->SetDefaultCellBackgroundColour(
+        wxSystemSettings::GetColour(wxSYS_COLOUR_BTNFACE));
 
     latencyText_ = dynamic_cast<wxStaticText*>(FindWindow(ID_LATENCY));
 }
